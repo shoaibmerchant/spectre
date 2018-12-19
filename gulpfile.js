@@ -5,6 +5,7 @@ var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var pug = require('gulp-pug');
+var browserSync = require('browser-sync').create();
 
 var paths = {
   source: './src/*.scss',
@@ -12,9 +13,17 @@ var paths = {
 };
 
 gulp.task('watch', function() {
+  browserSync.init({
+        server: {
+            baseDir: './docs',
+        }
+    });
+
   gulp.watch('./**/*.scss', ['build']);
   gulp.watch('./**/*.scss', ['docs']);
   gulp.watch('./**/*.pug', ['docs']);
+
+  gulp.watch('./docs/dist/spectre.min.css').on('change', browserSync.reload);
 });
 
 gulp.task('build', function() {
