@@ -1,45 +1,41 @@
 // Buttons
 .btn {
-  appearance: none;
-  background: $bg-color-light;
-  border: $border-width solid $primary-color;
-  border-radius: $border-radius;
-  color: $primary-color;
-  cursor: pointer;
-  display: inline-block;
-  font-size: $font-size;
-  height: $control-size;
-  line-height: $line-height;
-  outline: none;
-  padding: $control-padding-y $control-padding-x;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  background-color: $primary-color;
+  border: none;
+  color: $med-gray;
+  font-size: 0.7rem;
+  font-weight: 500;
+  box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  transition: background .2s, border .2s, box-shadow .2s, color .2s;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 0;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-bottom: 0;
+  display: inline-block;
+  height: 1.6rem;
+  min-width: 4rem;
+  line-height: 1.6rem;
+  outline: transparent;
+  border: 0.05rem solid transparent;
+  border-image: initial;
+  border-radius: 0;
   user-select: none;
-  vertical-align: middle;
   white-space: nowrap;
+  margin: 10px;
   &:focus {
     @include control-shadow();
   }
   &:focus,
   &:hover {
-    background: $secondary-color;
-    border-color: $primary-color-dark;
-    text-decoration: none;
-  }
-  &:active,
-  &.active {
     background: $primary-color-dark;
-    border-color: darken($primary-color-dark, 5%);
-    color: $light-color;
     text-decoration: none;
-    &.loading {
-      &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
-      }
-    }
   }
+
   &[disabled],
   &:disabled,
   &.disabled {
@@ -50,26 +46,29 @@
 
   // Button Primary
   &.btn-primary {
-    background: $primary-color;
-    border-color: $primary-color-dark;
+    background-color: $secondary-color;
     color: $light-color;
     &:focus,
     &:hover {
-      background: darken($primary-color-dark, 2%);
-      border-color: darken($primary-color-dark, 5%);
-      color: $light-color;
+      background: $secondary-color-dark;
     }
-    &:active,
-    &.active {
-      background: darken($primary-color-dark, 4%);
-      border-color: darken($primary-color-dark, 7%);
-      color: $light-color;
+  }
+
+  &.btn-disabled {
+    background-color: $gray-disabled;
+    color: $gray-disabled-text;
+    &:focus,
+    &:hover {
+      background: darken($gray-disabled, 5%);
     }
-    &.loading {
-      &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
-      }
+  }
+
+  &.btn-action {
+    background-color: $dark-color;
+    color: $light-color;
+    &:focus,
+    &:hover {
+      background: lighten($dark-color, 5%);
     }
   }
 
@@ -129,31 +128,7 @@
     }
   }
 
-  // Button Clear
-  &.btn-clear {
-    background: transparent;
-    border: 0;
-    color: currentColor;
-    height: $unit-5;
-    line-height: $unit-4;
-    margin-left: $unit-1;
-    margin-right: -2px;
-    opacity: 1;
-    padding: $unit-h;
-    text-decoration: none;
-    width: $unit-5;
 
-    &:focus,
-    &:hover {
-      background: rgba($bg-color, .5);
-      opacity: .95;
-    }
-
-    &::before {
-      content: "\2715";
-    }
-  }
-}
 
 // Button groups
 .btn-group {
@@ -190,4 +165,5 @@
       flex: 1 0 0;
     }
   }
+}
 }
