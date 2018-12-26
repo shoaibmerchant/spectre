@@ -1,5 +1,6 @@
 // Forms
 .form-group {
+  font-size: 0.7rem;
   &:not(:last-child) {
     margin-bottom: $layout-spacing;
   }
@@ -18,57 +19,47 @@ legend {
 // Form element: Label
 .form-label {
   display: block;
+  color: $body-font-color;
   line-height: $line-height;
-  padding: $control-padding-y + $border-width 0;
-
-  &.label-sm {
-    font-size: $font-size-sm;
-    padding: $control-padding-y-sm + $border-width 0;
-  }
-
-  &.label-lg {
-    font-size: $font-size-lg;
-    padding: $control-padding-y-lg + $border-width 0;
-  }
+  font-size: 0.7rem !important;
+  font-weight: 400;
+  box-sizing: border-box;
+  box-shadow: none;
+  padding: 5px 0;
+  overflow-wrap: break-word;
+  margin: 0;
 }
 
 // Form element: Input
 .form-input {
-  appearance: none;
-  background: $bg-color-light;
-  background-image: none;
-  border: $border-width solid $border-color-dark;
-  border-radius: $border-radius;
+  box-shadow: none;
+  background: none transparent;
+  margin: 0;
+  padding: 0 0.6rem;
+  box-sizing: border-box;
+  background-image: initial;
+  border: $border-width solid $gray-disabled-text;
+  border-radius: 0;
   color: $body-font-color;
   display: block;
-  font-size: $font-size;
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+  outline: 0px;
   height: $control-size;
   line-height: $line-height;
   max-width: 100%;
-  outline: none;
-  padding: $control-padding-y $control-padding-x;
   position: relative;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
   width: 100%;
+  &:hover {
+    border-color: $body-font-color;
+  }
   &:focus {
-    @include control-shadow();
-    border-color: $primary-color;
+    border-color: $secondary-color;
   }
   &::placeholder {
-    color: $gray-color;
-  }
-
-  // Input sizes
-  &.input-sm {
-    font-size: $font-size-sm;
-    height: $control-size-sm;
-    padding: $control-padding-y-sm $control-padding-x-sm;
-  }
-
-  &.input-lg {
-    font-size: $font-size-lg;
-    height: $control-size-lg;
-    padding: $control-padding-y-lg $control-padding-x-lg;
+    color: $gray-disabled-text;
+    font-size: 0.7rem;
   }
 
   &.input-inline {
@@ -88,6 +79,7 @@ textarea.form-input {
   &,
   &.input-lg,
   &.input-sm {
+    padding: 0 0.6rem;
     height: auto;
   }
 }
@@ -215,12 +207,12 @@ textarea.form-input {
     position: absolute;
     width: 1px;
     &:focus + .form-icon {
-      @include control-shadow();
-      border-color: $primary-color;
+      border-color: $gray-disabled-text;
     }
     &:checked + .form-icon {
-      background: $primary-color;
-      border-color: $primary-color;
+      background: $light-color;
+      border-color: $secondary-color;
+      box-shadow: none;
     }
   }
 
@@ -232,16 +224,6 @@ textarea.form-input {
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
   }
 
-  // Input checkbox, radio and switch sizes
-  &.input-sm {
-    font-size: $font-size-sm;
-    margin: 0;
-  }
-
-  &.input-lg {
-    font-size: $font-size-lg;
-    margin: ($control-size-lg - $control-size-sm) / 2 0;
-  }
 }
 
 .form-checkbox,
@@ -308,15 +290,15 @@ textarea.form-input {
   input {
     &:checked + .form-icon {
       &::before {
-        background: $bg-color-light;
+        background: $secondary-color;
         border-radius: 50%;
         content: "";
-        height: 6px;
+        height: 8px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 6px;
+        width: 8px;
       }
     }
   }
@@ -327,7 +309,7 @@ textarea.form-input {
   padding-left: ($unit-8 + $control-padding-x);
 
   .form-icon {
-    background: $gray-color;
+    background: $light-color;
     background-clip: padding-box;
     border-radius: $unit-2 + $border-width;
     height: $unit-4 + $border-width * 2;
@@ -335,16 +317,16 @@ textarea.form-input {
     top: ($control-size-sm - $unit-4) / 2 - $border-width;
     width: $unit-8;
     &::before {
-      background: $bg-color-light;
+      background: $body-font-color;
       border-radius: 50%;
       content: "";
       display: block;
-      height: $unit-4;
+      height: 0.6rem;
       left: 0;
       position: absolute;
       top: 0;
       transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
-      width: $unit-4;
+      width: 0.6rem;
     }
   }
 
@@ -356,7 +338,7 @@ textarea.form-input {
     }
     &:active + .form-icon {
       &::before {
-        background: $bg-color;
+        background-color: $secondary-color;
       }
     }
   }
