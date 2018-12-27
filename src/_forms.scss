@@ -25,9 +25,10 @@ legend {
   font-weight: 400;
   box-sizing: border-box;
   box-shadow: none;
-  padding: 5px 0;
+  padding: 0;
   overflow-wrap: break-word;
   margin: 0;
+  margin-top: 0.9rem;
 }
 
 // Form element: Input
@@ -104,20 +105,23 @@ textarea.form-input {
 // Form element: Select
 .form-select {
   appearance: none;
-  border: $border-width solid $border-color-dark;
+  border: $border-width solid $gray-disabled-text;
   border-radius: $border-radius;
   color: inherit;
-  font-size: $font-size;
+  font-size: 0.6rem;
   height: $control-size;
   line-height: $line-height;
   outline: none;
+  margin-top: 0.4rem;
   padding: $control-padding-y $control-padding-x;
   vertical-align: middle;
   width: 100%;
   background: $bg-color-light; 
+  &:hover {
+    border-color: $body-font-color;
+  }
   &:focus {
-    @include control-shadow();
-    border-color: $primary-color;
+    border-color: $secondary-color;
   }
   &::-ms-expand {
     display: none;
@@ -150,6 +154,8 @@ textarea.form-input {
     background: $bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
     padding-right: $control-icon-size + $control-padding-x;
   }
+
+ 
 }
 
 // Form Icons
@@ -192,6 +198,7 @@ textarea.form-input {
 .form-checkbox,
 .form-radio,
 .form-switch {
+  font-size: 0.6rem;
   display: block;
   line-height: $line-height;
   margin: ($control-size - $control-size-sm) / 2 0;
@@ -244,11 +251,14 @@ textarea.form-input {
 }
 .form-checkbox {
   .form-icon {
-    border-radius: $border-radius;
+    border-color: $body-font-color !important;
+    border-radius: none !important;
   }
 
   input {
     &:checked + .form-icon {
+      background-color: $secondary-color;
+      border: none !important;
       &::before {
         background-clip: padding-box;
         border: $border-width-lg solid $light-color;
@@ -263,21 +273,6 @@ textarea.form-input {
         top: 50%;
         transform: rotate(45deg);
         width: 6px;
-      }
-    }
-    &:indeterminate + .form-icon {
-      background: $primary-color;
-      border-color: $primary-color;
-      &::before {
-        background: $bg-color-light;
-        content: "";
-        height: 2px;
-        left: 50%;
-        margin-left: -5px;
-        margin-top: -1px;
-        position: absolute;
-        top: 50%;
-        width: 10px;
       }
     }
   }
@@ -316,15 +311,17 @@ textarea.form-input {
     left: 0;
     top: ($control-size-sm - $unit-4) / 2 - $border-width;
     width: $unit-8;
+    border-color: $body-font-color !important;
     &::before {
       background: $body-font-color;
       border-radius: 50%;
       content: "";
       display: block;
       height: 0.6rem;
-      left: 0;
+      left: 3px;
       position: absolute;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
       transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
       width: 0.6rem;
     }
@@ -332,8 +329,11 @@ textarea.form-input {
 
   input {
     &:checked + .form-icon {
+      background-color: $secondary-color;
+      border: none;
       &::before {
-        left: 14px;
+        background-color: $light-color;
+        left: 16px;
       }
     }
     &:active + .form-icon {

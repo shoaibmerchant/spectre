@@ -166,4 +166,44 @@
     }
   }
 }
+&-compound {
+  background-color: $gray-disabled;
+  margin: 10px 0;
+  padding: 1rem;
+  &:hover {
+    background-color: darken($gray-disabled, 5%);
+    cursor: pointer;
+  }
+  &:focus,
+  &:active {
+    background-color: $gray-disabled;
+    border: 1px solid $body-font-color;
+  }
+  .flexContainer {
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    min-width: 100%;
+    .textContainer {
+      flex-grow: 1;
+      text-align: left;
+      .btn-label {
+        margin: 0;
+        margin-bottom: 5px;
+        line-height: 100%;
+        font-weight: 600;
+        color: $gray-color;
+        font-size: 0.7rem;
+      }
+      .btn-desc {
+        font-weight: 400;
+        font-size: 0.6rem;
+        color: $gray-color;
+      }
+    }
+  }
+}
 }

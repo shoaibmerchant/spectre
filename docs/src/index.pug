@@ -21,17 +21,20 @@ block content
     .container.grid-lg
       .columns
         .column.col-4.col-xs-12
+          h4 Headers
           h1 Heading 1
           h2 Heading 2
           h3 Heading 3
           h4 Heading 4
         .column.col-4.col-xs-12
+          h4 BUTTONS
           .btn Default
           .btn.btn-primary Primary
           .btn.btn-disabled Disabled
           .btn.btn-action Action
           .btn.btn-link link button
         .column.col-4.col-xs-12
+          h4 Navigation
           ul.nav
             li.nav-item: a(href="#") General
             li.nav-item: a(href="#") Configuration
@@ -40,6 +43,7 @@ block content
             li.nav-item: a(href="#") Business Definition
       .columns
         .column.col-4.col-xs-12
+          h4 FORMS
           .form-group
             label.form-label Unique ID
             input.form-input(type='text')
@@ -48,6 +52,7 @@ block content
             label.form-label Description
             textarea.form-input
         .column.col-4.col-xs-12
+          h4 GROUP SELECTIONS
           .form-group
             label.form-label Gender
             label.form-radio
@@ -67,6 +72,37 @@ block content
               input(type='checkbox')
               i.form-icon
               | Toggle button off
+            label.form-label Checkbox
+            label.form-checkbox
+              input(type='checkbox')
+              i.form-icon
+              | Not Selected
+            label.form-checkbox
+              input(type='checkbox' checked)
+              i.form-icon
+              | Selected
+            label.form-label Dropdown
+            select.form-select 
+              option Choose an option 
+              option Slack
+              option Skype
+        .column.col-4.col-xs-12
+          h4 TABS
+          ul.tab.tab-block
+            li.tab-item.active: a(href="#") Nodes
+            li.tab-item: a(href="#") Data
+            li.tab-item: a(href="#") Appearance
+          h4 COMPOUND BUTTONS
+          .btn-compound
+            .flexContainer
+              .textContainer
+                .btn-label New
+                .btn-desc Create new tree from scratch
+          .btn-compound
+            .flexContainer
+              .textContainer
+                .btn-label New from sample data
+                .btn-desc Create tree from provided data
               
 
   .section.section-ads.bg-gray
