@@ -1,0 +1,226 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at https://aka.ms/fabric-assets-license
+*/
+@font-face {
+    font-family: 'FabricMDL2Icons';
+    src: url('../fonts/fabric-icons-ee4b8e1d.woff') format('woff');
+  }
+  
+  .ms-Icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'FabricMDL2Icons';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+  }
+  
+  // Mixins
+  @mixin ms-Icon--GlobalNavButton { content: "\E700"; }
+  @mixin ms-Icon--Brightness { content: "\E706"; }
+  @mixin ms-Icon--MapPin { content: "\E707"; }
+  @mixin ms-Icon--QuickNote { content: "\E70B"; }
+  @mixin ms-Icon--ChevronDown { content: "\E70D"; }
+  @mixin ms-Icon--ChevronUp { content: "\E70E"; }
+  @mixin ms-Icon--Edit { content: "\E70F"; }
+  @mixin ms-Icon--Add { content: "\E710"; }
+  @mixin ms-Icon--Cancel { content: "\E711"; }
+  @mixin ms-Icon--More { content: "\E712"; }
+  @mixin ms-Icon--Settings { content: "\E713"; }
+  @mixin ms-Icon--Mail { content: "\E715"; }
+  @mixin ms-Icon--People { content: "\E716"; }
+  @mixin ms-Icon--Stop { content: "\E71A"; }
+  @mixin ms-Icon--Filter { content: "\E71C"; }
+  @mixin ms-Icon--AllApps { content: "\E71D"; }
+  @mixin ms-Icon--Zoom { content: "\E71E"; }
+  @mixin ms-Icon--ZoomOut { content: "\E71F"; }
+  @mixin ms-Icon--Search { content: "\E721"; }
+  @mixin ms-Icon--Attach { content: "\E723"; }
+  @mixin ms-Icon--Send { content: "\E724"; }
+  @mixin ms-Icon--Forward { content: "\E72A"; }
+  @mixin ms-Icon--Back { content: "\E72B"; }
+  @mixin ms-Icon--Refresh { content: "\E72C"; }
+  @mixin ms-Icon--Lock { content: "\E72E"; }
+  @mixin ms-Icon--Blocked { content: "\E733"; }
+  @mixin ms-Icon--FavoriteStar { content: "\E734"; }
+  @mixin ms-Icon--FavoriteStarFill { content: "\E735"; }
+  @mixin ms-Icon--Checkbox { content: "\E739"; }
+  @mixin ms-Icon--CheckboxComposite { content: "\E73A"; }
+  @mixin ms-Icon--CheckboxFill { content: "\E73B"; }
+  @mixin ms-Icon--CheckboxCompositeReversed { content: "\E73D"; }
+  @mixin ms-Icon--CheckMark { content: "\E73E"; }
+  @mixin ms-Icon--BackToWindow { content: "\E73F"; }
+  @mixin ms-Icon--FullScreen { content: "\E740"; }
+  @mixin ms-Icon--Print { content: "\E749"; }
+  @mixin ms-Icon--Up { content: "\E74A"; }
+  @mixin ms-Icon--Down { content: "\E74B"; }
+  @mixin ms-Icon--Delete { content: "\E74D"; }
+  @mixin ms-Icon--Save { content: "\E74E"; }
+  @mixin ms-Icon--ReturnKey { content: "\E751"; }
+  @mixin ms-Icon--Cloud { content: "\E753"; }
+  @mixin ms-Icon--Sad { content: "\E757"; }
+  @mixin ms-Icon--PageLeft { content: "\E760"; }
+  @mixin ms-Icon--PageRight { content: "\E761"; }
+  @mixin ms-Icon--KeyboardClassic { content: "\E765"; }
+  @mixin ms-Icon--Play { content: "\E768"; }
+  @mixin ms-Icon--Pause { content: "\E769"; }
+  @mixin ms-Icon--ChevronLeft { content: "\E76B"; }
+  @mixin ms-Icon--ChevronRight { content: "\E76C"; }
+  @mixin ms-Icon--Emoji2 { content: "\E76E"; }
+  @mixin ms-Icon--Globe { content: "\E774"; }
+  @mixin ms-Icon--Contact { content: "\E77B"; }
+  @mixin ms-Icon--Unlock { content: "\E785"; }
+  @mixin ms-Icon--AutoEnhanceOn { content: "\E78D"; }
+  @mixin ms-Icon--Light { content: "\E793"; }
+  @mixin ms-Icon--Redo { content: "\E7A6"; }
+  @mixin ms-Icon--Undo { content: "\E7A7"; }
+  @mixin ms-Icon--Crop { content: "\E7A8"; }
+  @mixin ms-Icon--Warning { content: "\E7BA"; }
+  @mixin ms-Icon--Flag { content: "\E7C1"; }
+  @mixin ms-Icon--Page { content: "\E7C3"; }
+  @mixin ms-Icon--Tab { content: "\E7E9"; }
+  @mixin ms-Icon--Pinned { content: "\E840"; }
+  @mixin ms-Icon--RevToggleKey { content: "\E845"; }
+  @mixin ms-Icon--Previous { content: "\E892"; }
+  @mixin ms-Icon--Next { content: "\E893"; }
+  @mixin ms-Icon--Clear { content: "\E894"; }
+  @mixin ms-Icon--Sync { content: "\E895"; }
+  @mixin ms-Icon--Download { content: "\E896"; }
+  @mixin ms-Icon--Help { content: "\E897"; }
+  @mixin ms-Icon--OpenInNewWindow { content: "\E8A7"; }
+  @mixin ms-Icon--Switch { content: "\E8AB"; }
+  @mixin ms-Icon--ChromeClose { content: "\E8BB"; }
+  @mixin ms-Icon--Message { content: "\E8BD"; }
+  @mixin ms-Icon--Copy { content: "\E8C8"; }
+  @mixin ms-Icon--Like { content: "\E8E1"; }
+  @mixin ms-Icon--AddFriend { content: "\E8FA"; }
+  @mixin ms-Icon--Accept { content: "\E8FB"; }
+  @mixin ms-Icon--Comment { content: "\E90A"; }
+  @mixin ms-Icon--Repair { content: "\E90F"; }
+  @mixin ms-Icon--FullCircleMask { content: "\E91F"; }
+  @mixin ms-Icon--LocationFill { content: "\E920"; }
+  @mixin ms-Icon--FlickDown { content: "\E935"; }
+  @mixin ms-Icon--FlickUp { content: "\E936"; }
+  @mixin ms-Icon--FlickLeft { content: "\E937"; }
+  @mixin ms-Icon--FlickRight { content: "\E938"; }
+  @mixin ms-Icon--Code { content: "\E943"; }
+  @mixin ms-Icon--Info { content: "\E946"; }
+  @mixin ms-Icon--CalculatorMultiply { content: "\E947"; }
+  @mixin ms-Icon--CalculatorAddition { content: "\E948"; }
+  @mixin ms-Icon--CalculatorSubtract { content: "\E949"; }
+  @mixin ms-Icon--CalculatorEqualTo { content: "\E94E"; }
+  @mixin ms-Icon--ChevronUpSmall { content: "\E96D"; }
+  @mixin ms-Icon--ChevronDownSmall { content: "\E96E"; }
+  @mixin ms-Icon--ChevronLeftSmall { content: "\E96F"; }
+  @mixin ms-Icon--ChevronRightSmall { content: "\E970"; }
+  @mixin ms-Icon--ChevronUpMed { content: "\E971"; }
+  @mixin ms-Icon--ChevronDownMed { content: "\E972"; }
+  @mixin ms-Icon--ChevronLeftMed { content: "\E973"; }
+  @mixin ms-Icon--ChevronRightMed { content: "\E974"; }
+  
+  
+  // Classes
+  .ms-Icon--GlobalNavButton:before { @include ms-Icon--GlobalNavButton }
+  .ms-Icon--Brightness:before { @include ms-Icon--Brightness }
+  .ms-Icon--MapPin:before { @include ms-Icon--MapPin }
+  .ms-Icon--QuickNote:before { @include ms-Icon--QuickNote }
+  .ms-Icon--ChevronDown:before { @include ms-Icon--ChevronDown }
+  .ms-Icon--ChevronUp:before { @include ms-Icon--ChevronUp }
+  .ms-Icon--Edit:before { @include ms-Icon--Edit }
+  .ms-Icon--Add:before { @include ms-Icon--Add }
+  .ms-Icon--Cancel:before { @include ms-Icon--Cancel }
+  .ms-Icon--More:before { @include ms-Icon--More }
+  .ms-Icon--Settings:before { @include ms-Icon--Settings }
+  .ms-Icon--Mail:before { @include ms-Icon--Mail }
+  .ms-Icon--People:before { @include ms-Icon--People }
+  .ms-Icon--Stop:before { @include ms-Icon--Stop }
+  .ms-Icon--Filter:before { @include ms-Icon--Filter }
+  .ms-Icon--AllApps:before { @include ms-Icon--AllApps }
+  .ms-Icon--Zoom:before { @include ms-Icon--Zoom }
+  .ms-Icon--ZoomOut:before { @include ms-Icon--ZoomOut }
+  .ms-Icon--Search:before { @include ms-Icon--Search }
+  .ms-Icon--Attach:before { @include ms-Icon--Attach }
+  .ms-Icon--Send:before { @include ms-Icon--Send }
+  .ms-Icon--Forward:before { @include ms-Icon--Forward }
+  .ms-Icon--Back:before { @include ms-Icon--Back }
+  .ms-Icon--Refresh:before { @include ms-Icon--Refresh }
+  .ms-Icon--Lock:before { @include ms-Icon--Lock }
+  .ms-Icon--Blocked:before { @include ms-Icon--Blocked }
+  .ms-Icon--FavoriteStar:before { @include ms-Icon--FavoriteStar }
+  .ms-Icon--FavoriteStarFill:before { @include ms-Icon--FavoriteStarFill }
+  .ms-Icon--Checkbox:before { @include ms-Icon--Checkbox }
+  .ms-Icon--CheckboxComposite:before { @include ms-Icon--CheckboxComposite }
+  .ms-Icon--CheckboxFill:before { @include ms-Icon--CheckboxFill }
+  .ms-Icon--CheckboxCompositeReversed:before { @include ms-Icon--CheckboxCompositeReversed }
+  .ms-Icon--CheckMark:before { @include ms-Icon--CheckMark }
+  .ms-Icon--BackToWindow:before { @include ms-Icon--BackToWindow }
+  .ms-Icon--FullScreen:before { @include ms-Icon--FullScreen }
+  .ms-Icon--Print:before { @include ms-Icon--Print }
+  .ms-Icon--Up:before { @include ms-Icon--Up }
+  .ms-Icon--Down:before { @include ms-Icon--Down }
+  .ms-Icon--Delete:before { @include ms-Icon--Delete }
+  .ms-Icon--Save:before { @include ms-Icon--Save }
+  .ms-Icon--ReturnKey:before { @include ms-Icon--ReturnKey }
+  .ms-Icon--Cloud:before { @include ms-Icon--Cloud }
+  .ms-Icon--Sad:before { @include ms-Icon--Sad }
+  .ms-Icon--PageLeft:before { @include ms-Icon--PageLeft }
+  .ms-Icon--PageRight:before { @include ms-Icon--PageRight }
+  .ms-Icon--KeyboardClassic:before { @include ms-Icon--KeyboardClassic }
+  .ms-Icon--Play:before { @include ms-Icon--Play }
+  .ms-Icon--Pause:before { @include ms-Icon--Pause }
+  .ms-Icon--ChevronLeft:before { @include ms-Icon--ChevronLeft }
+  .ms-Icon--ChevronRight:before { @include ms-Icon--ChevronRight }
+  .ms-Icon--Emoji2:before { @include ms-Icon--Emoji2 }
+  .ms-Icon--Globe:before { @include ms-Icon--Globe }
+  .ms-Icon--Contact:before { @include ms-Icon--Contact }
+  .ms-Icon--Unlock:before { @include ms-Icon--Unlock }
+  .ms-Icon--AutoEnhanceOn:before { @include ms-Icon--AutoEnhanceOn }
+  .ms-Icon--Light:before { @include ms-Icon--Light }
+  .ms-Icon--Redo:before { @include ms-Icon--Redo }
+  .ms-Icon--Undo:before { @include ms-Icon--Undo }
+  .ms-Icon--Crop:before { @include ms-Icon--Crop }
+  .ms-Icon--Warning:before { @include ms-Icon--Warning }
+  .ms-Icon--Flag:before { @include ms-Icon--Flag }
+  .ms-Icon--Page:before { @include ms-Icon--Page }
+  .ms-Icon--Tab:before { @include ms-Icon--Tab }
+  .ms-Icon--Pinned:before { @include ms-Icon--Pinned }
+  .ms-Icon--RevToggleKey:before { @include ms-Icon--RevToggleKey }
+  .ms-Icon--Previous:before { @include ms-Icon--Previous }
+  .ms-Icon--Next:before { @include ms-Icon--Next }
+  .ms-Icon--Clear:before { @include ms-Icon--Clear }
+  .ms-Icon--Sync:before { @include ms-Icon--Sync }
+  .ms-Icon--Download:before { @include ms-Icon--Download }
+  .ms-Icon--Help:before { @include ms-Icon--Help }
+  .ms-Icon--OpenInNewWindow:before { @include ms-Icon--OpenInNewWindow }
+  .ms-Icon--Switch:before { @include ms-Icon--Switch }
+  .ms-Icon--ChromeClose:before { @include ms-Icon--ChromeClose }
+  .ms-Icon--Message:before { @include ms-Icon--Message }
+  .ms-Icon--Copy:before { @include ms-Icon--Copy }
+  .ms-Icon--Like:before { @include ms-Icon--Like }
+  .ms-Icon--AddFriend:before { @include ms-Icon--AddFriend }
+  .ms-Icon--Accept:before { @include ms-Icon--Accept }
+  .ms-Icon--Comment:before { @include ms-Icon--Comment }
+  .ms-Icon--Repair:before { @include ms-Icon--Repair }
+  .ms-Icon--FullCircleMask:before { @include ms-Icon--FullCircleMask }
+  .ms-Icon--LocationFill:before { @include ms-Icon--LocationFill }
+  .ms-Icon--FlickDown:before { @include ms-Icon--FlickDown }
+  .ms-Icon--FlickUp:before { @include ms-Icon--FlickUp }
+  .ms-Icon--FlickLeft:before { @include ms-Icon--FlickLeft }
+  .ms-Icon--FlickRight:before { @include ms-Icon--FlickRight }
+  .ms-Icon--Code:before { @include ms-Icon--Code }
+  .ms-Icon--Info:before { @include ms-Icon--Info }
+  .ms-Icon--CalculatorMultiply:before { @include ms-Icon--CalculatorMultiply }
+  .ms-Icon--CalculatorAddition:before { @include ms-Icon--CalculatorAddition }
+  .ms-Icon--CalculatorSubtract:before { @include ms-Icon--CalculatorSubtract }
+  .ms-Icon--CalculatorEqualTo:before { @include ms-Icon--CalculatorEqualTo }
+  .ms-Icon--ChevronUpSmall:before { @include ms-Icon--ChevronUpSmall }
+  .ms-Icon--ChevronDownSmall:before { @include ms-Icon--ChevronDownSmall }
+  .ms-Icon--ChevronLeftSmall:before { @include ms-Icon--ChevronLeftSmall }
+  .ms-Icon--ChevronRightSmall:before { @include ms-Icon--ChevronRightSmall }
+  .ms-Icon--ChevronUpMed:before { @include ms-Icon--ChevronUpMed }
+  .ms-Icon--ChevronDownMed:before { @include ms-Icon--ChevronDownMed }
+  .ms-Icon--ChevronLeftMed:before { @include ms-Icon--ChevronLeftMed }
+  .ms-Icon--ChevronRightMed:before { @include ms-Icon--ChevronRightMed }
+  
+  

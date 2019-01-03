@@ -1,160 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Spectre.css CSS Framework</title>
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
-    <meta name="author" content="Yan Zhu">
-    <meta property="og:url" content="https://picturepan2.github.io/spectre/">
-    <meta property="og:title" content="Spectre.css CSS Framework">
-    <meta property="og:description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@spectrecss">
-    <meta name="twitter:creator" content="@picturepan2">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico">
-    <link rel="icon" href="img/favicons/favicon.png">
-    <link rel="stylesheet" href="dist/spectre.min.css">
-    <link rel="stylesheet" href="dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="dist/docs.min.css">
-    <link rel="canonical" href="https://picturepan2.github.io/spectre/">
-  </head>
-  <body>
-    <div class="section section-hero bg-gray">
-      <div class="grid-hero container grid-lg text-center" id="overview">
-        <div class="docs-brand"><a class="docs-logo" href="index.html"><img src="img/spectre-logo.svg" alt="Spectre.css CSS Framework">
-            <h2>SPECTRE</h2></a></div>
-        <h1>SPECTRE.CSS</h1>
-        <h2>A 
-          <u>Lightweight</u>, 
-          <u>Responsive</u> and 
-          <u>Modern</u> CSS Framework
-        </h2>
-      </div>
+
+<head>
+  <title>Spectre.css CSS Framework</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+  <meta name="author" content="Yan Zhu">
+  <meta property="og:url" content="https://picturepan2.github.io/spectre/">
+  <meta property="og:title" content="Spectre.css CSS Framework">
+  <meta property="og:description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@spectrecss">
+  <meta name="twitter:creator" content="@picturepan2">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.png">
+  <link rel="stylesheet" href="dist/spectre.min.css">
+  <link rel="stylesheet" href="dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="dist/docs.min.css">
+  <link rel="canonical" href="https://picturepan2.github.io/spectre/">
+  <style>
+
+    /*  accordion */
+
+    .accordion-header {
+      font-size: 14px;
+      color: #106ebe;
+      text-transform: uppercase;
+      background: #f4f4f4;
+      padding: 0.6em 0.6em !important;
+    }
+
+    /* colorpicker */
+
+    .color-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .color-picker-block {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .color-picker-block input {
+      width: 236px;
+    }
+
+    .cc-box-container:hover,
+    .cc-box-container:focus {
+      border: 2px solid #106ebe;
+    }
+
+    .add-new {
+      background: #ddd;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    .cc-box-container {
+      height: 36px;
+      width: 36px;
+    }
+
+    /* toolbar block and dropdown */
+
+    .toolbar-block {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .toolbar-block a {
+      color: #333;
+      font-size: 14px;
+      padding: 0.6em 1em;
+    }
+
+    .toolbar-block a:hover,
+    .toolbar-block a:focus {
+      text-decoration: none;
+      background: #e6e6e6;
+    }
+
+    .toolbar-block a i {
+      color: #106ebe;
+    }
+
+    .dropdown a.dropdown-toggle {
+      width: 42px;
+      display: block;
+    }
+
+    .menu {
+      border: 1px solid #e6e6e6;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .menu .menu-item a:hover,
+    .menu .menu-item a:focus {
+      color: #333;
+      background: #e6e6e6;
+    }
+
+    /* notifications */
+
+    .msg-block {
+      padding: 1em;
+    }
+
+    .info-message {
+      background: #333333bf;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .theme-message {
+      background: #f2c812d4;
+      color: #333;
+      font-size: 12px;
+    }
+
+    .success-message {
+      background: #2196f3d4;
+      color: #fff;
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="section section-hero bg-gray">
+    <div class="grid-hero container grid-lg text-center" id="overview">
+      <div class="docs-brand"><a class="docs-logo" href="index.html"><img src="img/spectre-logo.svg" alt="Spectre.css CSS Framework">
+          <h2>SPECTRE</h2>
+        </a></div>
+      <h1>SPECTRE.CSS</h1>
+      <h2>A
+        <u>Lightweight</u>,
+        <u>Responsive</u> and
+        <u>Modern</u> CSS Framework
+      </h2>
     </div>
-    <div class="section section-updates bg-gray">
-      <div class="container grid-lg">
-        <div class="columns">
-          <div class="column col-4 col-xs-12">
-            <h4>Headers</h4>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <h4>BUTTONS</h4>
-            <div class="btn">Default</div>
-            <div class="btn btn-primary">Primary</div>
-            <div class="btn btn-disabled">Disabled</div>
-            <div class="btn btn-action">Action</div>
-            <div class="btn btn-link">link button</div>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <h4>Navigation</h4>
-            <ul class="nav">
-              <li class="nav-item"><a href="#">General</a></li>
-              <li class="nav-item"><a href="#">Configuration</a></li>
-              <li class="nav-item"><a href="#">Display</a></li>
-              <li class="nav-item"><a href="#">Simulation</a></li>
-              <li class="nav-item"><a href="#">Business Definition</a></li>
-            </ul>
-          </div>
+  </div>
+  <div class="section section-updates bg-gray">
+    <div class="container grid-lg">
+      <div class="columns">
+        <div class="column col-4 col-xs-12">
+          <h4>Headers</h4>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
         </div>
-        <div class="columns">
-          <div class="column col-4 col-xs-12">
-            <h4>FORMS</h4>
-            <div class="form-group">
-              <label class="form-label">Unique ID</label>
+        <div class="column col-4 col-xs-12">
+          <h4>BUTTONS</h4>
+          <div class="btn">Default</div>
+          <div class="btn btn-primary">Primary</div>
+          <div class="btn btn-disabled">Disabled</div>
+          <div class="btn btn-action">Action</div>
+          <div class="btn btn-link">link button</div>
+        </div>
+        <div class="column col-4 col-xs-12">
+          <h4>Navigation</h4>
+          <ul class="nav">
+            <li class="nav-item"><a href="#">General</a></li>
+            <li class="nav-item"><a href="#">Configuration</a></li>
+            <li class="nav-item"><a href="#">Display</a></li>
+            <li class="nav-item"><a href="#">Simulation</a></li>
+            <li class="nav-item"><a href="#">Business Definition</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column col-4 col-xs-12">
+          <h4>FORMS</h4>
+          <div class="form-group">
+            <label class="form-label">Unique ID</label>
+            <input class="form-input" type="text">
+            <label class="form-label">Title</label>
+            <input class="form-input" type="text" placeholder="Name">
+            <label class="form-label">Description</label>
+            <textarea class="form-input"></textarea>
+          </div>
+          <h4>INPUTS/FORMS</h4>
+          <div class="form-group has-error">
+            <label class="form-label" for="input-example-1">Password</label>
+            <input class="form-input is-success" type="text" id="input-example-1" placeholder="Password">
+            <p class="form-input-hint">Passwords must have at least 8 characters.</p>
+          </div>
+          <h4>colorpicker</h4>
+            <div class="color-picker-block">
               <input class="form-input" type="text">
-              <label class="form-label">Title</label>
-              <input class="form-input" type="text" placeholder="Name">
-              <label class="form-label">Description</label>
-              <textarea class="form-input"></textarea>
+              <div class="s-rounded cc-box-container ml-1" style="background: red;"></div>
             </div>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <h4>GROUP SELECTIONS</h4>
-            <div class="form-group">
-              <label class="form-label">Gender</label>
-              <label class="form-radio">
-                <input type="radio" name="gender" checked=""><i class="form-icon"> </i>Male
-              </label>
-              <label class="form-radio">
-                <input type="radio" name="gender"><i class="form-icon"> </i>Female
-              </label>
-              <label class="form-label">Toggle button</label>
-              <label class="form-switch">
-                <input type="checkbox" checked><i class="form-icon"></i>Toggle button on
-              </label>
-              <label class="form-switch">
-                <input type="checkbox"><i class="form-icon"></i>Toggle button off
-              </label>
-              <label class="form-label">Checkbox</label>
-              <label class="form-checkbox">
-                <input type="checkbox"><i class="form-icon"></i>Not Selected
-              </label>
-              <label class="form-checkbox">
-                <input type="checkbox" checked><i class="form-icon"></i>Selected
-              </label>
-              <label class="form-label">Dropdown</label>
-              <select class="form-select"> 
-                <option>Choose an option </option>
-                <option>Slack</option>
-                <option>Skype</option>
-              </select>
-            </div>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <h4>TABS</h4>
-            <ul class="tab tab-block">
-              <li class="tab-item active"><a href="#">Nodes</a></li>
-              <li class="tab-item"><a href="#">Data</a></li>
-              <li class="tab-item"><a href="#">Appearance</a></li>
-            </ul>
-            <h4>COMPOUND BUTTONS</h4>
-            <div class="btn-compound">
-              <div class="flexContainer">
-                <div class="textContainer">
-                  <div class="btn-label">New</div>
-                  <div class="btn-desc">Create new tree from scratch</div>
-                </div>
+            <div class="color-container mt-1">
+              <div class="s-rounded cc-box-container mr-1" style="background: red;"></div>
+              <div class="s-rounded cc-box-container mr-1" style="background: olive;"></div>
+              <div class="s-rounded cc-box-container mr-1" style="background: greenyellow;"></div>
+              <div class="s-rounded cc-box-container mr-1" style="background: violet;"></div>
+              <div class="s-rounded cc-box-container mr-1" style="background: mediumvioletred;"></div>
+              <div class="s-rounded cc-box-container mr-1" style="background: violet;"></div>
+              <div class="s-rounded cc-box-container add-new" style="background:#ddd;">
+                <i class="icon icon-plus"></i>
               </div>
             </div>
-            <div class="btn-compound">
-              <div class="flexContainer">
-                <div class="textContainer">
-                  <div class="btn-label">New from sample data</div>
-                  <div class="btn-desc">Create tree from provided data</div>
-                </div>
+        </div>
+        <div class="column col-4 col-xs-12">
+          <h4>GROUP SELECTIONS</h4>
+          <div class="form-group">
+            <label class="form-label">Gender</label>
+            <label class="form-radio">
+              <input type="radio" name="gender" checked=""><i class="form-icon"> </i>Male
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="gender"><i class="form-icon"> </i>Female
+            </label>
+            <label class="form-label">Toggle button</label>
+            <label class="form-switch">
+              <input type="checkbox" checked><i class="form-icon"></i>Toggle button on
+            </label>
+            <label class="form-switch">
+              <input type="checkbox"><i class="form-icon"></i>Toggle button off
+            </label>
+            <label class="form-label">Checkbox</label>
+            <label class="form-checkbox">
+              <input type="checkbox"><i class="form-icon"></i>Not Selected
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" checked><i class="form-icon"></i>Selected
+            </label>
+            <label class="form-label">Dropdown</label>
+            <select class="form-select">
+              <option>Choose an option </option>
+              <option>Slack</option>
+              <option>Skype</option>
+            </select>
+            <h4 class="mt-2">Spinner</h4>
+            <div class="loading loading-lg"></div>
+          </div>
+        </div>
+        <div class="column col-4 col-xs-12">
+          <h4>TABS</h4>
+          <ul class="tab tab-block">
+            <li class="tab-item active"><a href="#">Nodes</a></li>
+            <li class="tab-item"><a href="#">Data</a></li>
+            <li class="tab-item"><a href="#">Appearance</a></li>
+          </ul>
+          <h4>COMPOUND BUTTONS</h4>
+          <div class="btn-compound">
+            <div class="flexContainer">
+              <div class="textContainer">
+                <div class="btn-label">New</div>
+                <div class="btn-desc">Create new tree from scratch</div>
               </div>
             </div>
+          </div>
+          <div class="btn-compound">
+            <div class="flexContainer">
+              <div class="textContainer">
+                <div class="btn-label">New from sample data</div>
+                <div class="btn-desc">Create tree from provided data</div>
+              </div>
+            </div>
+          </div>
+          <h4>COMPOUND BUTTON WITH ICON</h4>
+          <div class="btn-compound">
+            <div class="flexContainer">
+              <i class="icon icon-search mr-2" style="font-size: 32px;"></i>
+              <div class="textContainer">
+                <div class="btn-label">New from sample data</div>
+                <div class="btn-desc">Create tree from provided data</div>
+              </div>
+            </div>
+          </div>
+          <h4>ACCORDIONS</h4>
+          <div class="accordion">
+            <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
+            <label class="accordion-header" for="accordion-1">
+              <i class="icon icon-arrow-right mr-1"></i>
+              Configure your type
+            </label>
+            <div class="accordion-body">
+              <!-- Accordions content -->
+              Hello World
+            </div>
+          </div>
+          <div class="accordion">
+            <input type="checkbox" id="accordion-2" name="accordion-checkbox" hidden>
+            <label class="accordion-header" for="accordion-2">
+              <i class="icon icon-arrow-right mr-1"></i>
+              Configure your rule
+            </label>
+            <div class="accordion-body">
+              <!-- Accordions content -->
+              Hello World 2
+            </div>
+          </div>
+        </div>
+        <div class="column col-12 col-xs-12 mt-2">
+          <h4>Toolbar with Dropdown</h4>
+          <div class="toolbar-block">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" tabindex="0"><i class="icon icon-menu"></i></a>
+              <ul class="menu">
+                <li class="menu-item"><a href="#"><i class="icon icon-link mr-1"></i>Link</a></li>
+                <li class="menu-item"><a href="#"><i class="icon icon-delete mr-1"></i>Delete</a></li>
+                <li class="menu-item"><a href="#"><i class="icon icon-edit mr-1"></i>Rename</a></li>
+              </ul>
+            </div>
+            <a href="#"><i class="icon icon-upload mr-2"></i> Upload</a>
+            <a href="#"><i class="icon icon-refresh mr-2"></i> Refresh</a>
+            <a href="#"><i class="icon icon-download mr-2"></i> Download</a>
+            <a href="#"><i class="icon icon-search mr-2"></i> Search</a>
+          </div>
+        </div>
+        <div class="column col-12 col-xs-12 mt-2">
+          <h4 class="my-2">Notifications / Alert</h4>
+          <div class="info-message msg-block mt-2">
+              Info lorem ipsum dolor sit amet, a elit sem interdum consectetur adipiscing elit. 
+          </div>
+          <div class="theme-message msg-block mt-2">
+              Info lorem ipsum dolor sit amet, a elit sem interdum consectetur adipiscing elit. 
+          </div>
+          <div class="success-message msg-block mt-2">
+              Info lorem ipsum dolor sit amet, a elit sem interdum consectetur adipiscing elit. 
           </div>
         </div>
       </div>
     </div>
-    <div class="section section-ads bg-gray">
-      <div class="docs-ad docs-ad-sidebar text-center">
-        <script id="_carbonads_js" async="" type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CK7DTKQW&amp;placement=picturepan2githubio"></script>
-      </div>
+  </div>
+  <!-- <div class="section section-ads bg-gray">
+    <div class="docs-ad docs-ad-sidebar text-center">
+      <script id="_carbonads_js" async="" type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CK7DTKQW&amp;placement=picturepan2githubio"></script>
     </div>
-    <footer class="section section-footer">
+  </div> -->
+
+
+
+
+
+  <!-- <footer class="section section-footer">
       <div class="docs-footer container grid-lg" id="copyright">
         <p><a href="getting-started.html" target="_blank">Documents</a> · <a href="https://github.com/picturepan2/spectre" target="_blank">GitHub</a> · <a href="https://twitter.com/spectrecss" target="_blank">Twitter</a> · <a href="https://www.paypal.me/picturepan2" target="_blank">PayPal Donate</a> · Version <span class="version"></span></p>
         <p>Designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/picturepan2/spectre/blob/master/LICENSE" target="_blank">MIT License</a>.</p>
       </div>
-    </footer>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-2702768-8', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+    </footer> -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-2702768-8', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
 </html>

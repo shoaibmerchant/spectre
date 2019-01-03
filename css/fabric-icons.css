@@ -1,0 +1,120 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at https://aka.ms/fabric-assets-license
+*/
+@font-face {
+    font-family: 'FabricMDL2Icons';
+    src: url('../fonts/fabric-icons-ee4b8e1d.woff') format('woff');
+  }
+  
+  .ms-Icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'FabricMDL2Icons';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+  }
+  
+  .ms-Icon--GlobalNavButton:before { content: "\E700"; }
+  .ms-Icon--Brightness:before { content: "\E706"; }
+  .ms-Icon--MapPin:before { content: "\E707"; }
+  .ms-Icon--QuickNote:before { content: "\E70B"; }
+  .ms-Icon--ChevronDown:before { content: "\E70D"; }
+  .ms-Icon--ChevronUp:before { content: "\E70E"; }
+  .ms-Icon--Edit:before { content: "\E70F"; }
+  .ms-Icon--Add:before { content: "\E710"; }
+  .ms-Icon--Cancel:before { content: "\E711"; }
+  .ms-Icon--More:before { content: "\E712"; }
+  .ms-Icon--Settings:before { content: "\E713"; }
+  .ms-Icon--Mail:before { content: "\E715"; }
+  .ms-Icon--People:before { content: "\E716"; }
+  .ms-Icon--Stop:before { content: "\E71A"; }
+  .ms-Icon--Filter:before { content: "\E71C"; }
+  .ms-Icon--AllApps:before { content: "\E71D"; }
+  .ms-Icon--Zoom:before { content: "\E71E"; }
+  .ms-Icon--ZoomOut:before { content: "\E71F"; }
+  .ms-Icon--Search:before { content: "\E721"; }
+  .ms-Icon--Attach:before { content: "\E723"; }
+  .ms-Icon--Send:before { content: "\E724"; }
+  .ms-Icon--Forward:before { content: "\E72A"; }
+  .ms-Icon--Back:before { content: "\E72B"; }
+  .ms-Icon--Refresh:before { content: "\E72C"; }
+  .ms-Icon--Lock:before { content: "\E72E"; }
+  .ms-Icon--Blocked:before { content: "\E733"; }
+  .ms-Icon--FavoriteStar:before { content: "\E734"; }
+  .ms-Icon--FavoriteStarFill:before { content: "\E735"; }
+  .ms-Icon--Checkbox:before { content: "\E739"; }
+  .ms-Icon--CheckboxComposite:before { content: "\E73A"; }
+  .ms-Icon--CheckboxFill:before { content: "\E73B"; }
+  .ms-Icon--CheckboxCompositeReversed:before { content: "\E73D"; }
+  .ms-Icon--CheckMark:before { content: "\E73E"; }
+  .ms-Icon--BackToWindow:before { content: "\E73F"; }
+  .ms-Icon--FullScreen:before { content: "\E740"; }
+  .ms-Icon--Print:before { content: "\E749"; }
+  .ms-Icon--Up:before { content: "\E74A"; }
+  .ms-Icon--Down:before { content: "\E74B"; }
+  .ms-Icon--Delete:before { content: "\E74D"; }
+  .ms-Icon--Save:before { content: "\E74E"; }
+  .ms-Icon--ReturnKey:before { content: "\E751"; }
+  .ms-Icon--Cloud:before { content: "\E753"; }
+  .ms-Icon--Sad:before { content: "\E757"; }
+  .ms-Icon--PageLeft:before { content: "\E760"; }
+  .ms-Icon--PageRight:before { content: "\E761"; }
+  .ms-Icon--KeyboardClassic:before { content: "\E765"; }
+  .ms-Icon--Play:before { content: "\E768"; }
+  .ms-Icon--Pause:before { content: "\E769"; }
+  .ms-Icon--ChevronLeft:before { content: "\E76B"; }
+  .ms-Icon--ChevronRight:before { content: "\E76C"; }
+  .ms-Icon--Emoji2:before { content: "\E76E"; }
+  .ms-Icon--Globe:before { content: "\E774"; }
+  .ms-Icon--Contact:before { content: "\E77B"; }
+  .ms-Icon--Unlock:before { content: "\E785"; }
+  .ms-Icon--AutoEnhanceOn:before { content: "\E78D"; }
+  .ms-Icon--Light:before { content: "\E793"; }
+  .ms-Icon--Redo:before { content: "\E7A6"; }
+  .ms-Icon--Undo:before { content: "\E7A7"; }
+  .ms-Icon--Crop:before { content: "\E7A8"; }
+  .ms-Icon--Warning:before { content: "\E7BA"; }
+  .ms-Icon--Flag:before { content: "\E7C1"; }
+  .ms-Icon--Page:before { content: "\E7C3"; }
+  .ms-Icon--Tab:before { content: "\E7E9"; }
+  .ms-Icon--Pinned:before { content: "\E840"; }
+  .ms-Icon--RevToggleKey:before { content: "\E845"; }
+  .ms-Icon--Previous:before { content: "\E892"; }
+  .ms-Icon--Next:before { content: "\E893"; }
+  .ms-Icon--Clear:before { content: "\E894"; }
+  .ms-Icon--Sync:before { content: "\E895"; }
+  .ms-Icon--Download:before { content: "\E896"; }
+  .ms-Icon--Help:before { content: "\E897"; }
+  .ms-Icon--OpenInNewWindow:before { content: "\E8A7"; }
+  .ms-Icon--Switch:before { content: "\E8AB"; }
+  .ms-Icon--ChromeClose:before { content: "\E8BB"; }
+  .ms-Icon--Message:before { content: "\E8BD"; }
+  .ms-Icon--Copy:before { content: "\E8C8"; }
+  .ms-Icon--Like:before { content: "\E8E1"; }
+  .ms-Icon--AddFriend:before { content: "\E8FA"; }
+  .ms-Icon--Accept:before { content: "\E8FB"; }
+  .ms-Icon--Comment:before { content: "\E90A"; }
+  .ms-Icon--Repair:before { content: "\E90F"; }
+  .ms-Icon--FullCircleMask:before { content: "\E91F"; }
+  .ms-Icon--LocationFill:before { content: "\E920"; }
+  .ms-Icon--FlickDown:before { content: "\E935"; }
+  .ms-Icon--FlickUp:before { content: "\E936"; }
+  .ms-Icon--FlickLeft:before { content: "\E937"; }
+  .ms-Icon--FlickRight:before { content: "\E938"; }
+  .ms-Icon--Code:before { content: "\E943"; }
+  .ms-Icon--Info:before { content: "\E946"; }
+  .ms-Icon--CalculatorMultiply:before { content: "\E947"; }
+  .ms-Icon--CalculatorAddition:before { content: "\E948"; }
+  .ms-Icon--CalculatorSubtract:before { content: "\E949"; }
+  .ms-Icon--CalculatorEqualTo:before { content: "\E94E"; }
+  .ms-Icon--ChevronUpSmall:before { content: "\E96D"; }
+  .ms-Icon--ChevronDownSmall:before { content: "\E96E"; }
+  .ms-Icon--ChevronLeftSmall:before { content: "\E96F"; }
+  .ms-Icon--ChevronRightSmall:before { content: "\E970"; }
+  .ms-Icon--ChevronUpMed:before { content: "\E971"; }
+  .ms-Icon--ChevronDownMed:before { content: "\E972"; }
+  .ms-Icon--ChevronLeftMed:before { content: "\E973"; }
+  .ms-Icon--ChevronRightMed:before { content: "\E974"; }
+  
